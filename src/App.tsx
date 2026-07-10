@@ -19,8 +19,8 @@ function App() {
         <AddTodoForm onSubmit={addTodo} />
         <TodoList
           todos={todos}
-          oncompletedChange={setTodoCompleted}
-          ondelete={deleteTodo}
+          onCompletedChange={setTodoCompleted}
+          onDelete={deleteTodo}
         />
       </div>
       <TodoSummary
@@ -32,4 +32,3 @@ function App() {
 }
 
 export default App;
-

@@ -3,11 +3,11 @@ import type { Todo } from "../types/todos";
 
 interface TodoListProps {
     todos: Todo[];
-    oncompletedChange: (id: number, completed: boolean) => void;
-    ondelete: (id: number) => void;
+    onCompletedChange: (id: number, completed: boolean) => void;
+    onDelete: (id: number) => void;
 }
 export default function TodoList(
-{ todos, oncompletedChange, ondelete }: TodoListProps
+{ todos, onCompletedChange, onDelete }: TodoListProps
 ){
     const todosorted = [...todos].sort((a, b) => {
         if (a.completed === b.completed) {
@@ -23,8 +23,8 @@ export default function TodoList(
             <TodoItem
               key={todo.id}
               todo={todo}
-              onCompletedChange={oncompletedChange}
-                onDelete={ondelete}
+              onCompletedChange={onCompletedChange}
+              onDelete={onDelete}
             />
           ))}
         </div>
